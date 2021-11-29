@@ -268,7 +268,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Usuarios',
-                    'url'  => '#',
+                    'route'  => 'admin.users.index',
                     'icon' => 'fas fa-fw fa-users',
                 ],
                 [

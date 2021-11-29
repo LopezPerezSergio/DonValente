@@ -2,11 +2,11 @@
 
 namespace App\Http\Livewire\Admin;
 
-use App\Models\Customer;
+use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class CustomersIndex extends Component
+class UsersIndex extends Component
 {
     use WithPagination;
 
@@ -18,10 +18,11 @@ class CustomersIndex extends Component
     {
         $this->resetPage();
     }
+
     public function render()
     {
-        $customers = Customer::where('name','LIKE','%'.$this->search.'%')
+        $users = User::where('name','LIKE','%'.$this->search.'%')
                            ->paginate(10);
-        return view('livewire.admin.customers-index',compact('customers'));
+        return view('livewire.admin.users-index',compact('users'));
     }
 }
