@@ -3,7 +3,7 @@
 @section('title', 'Categorías')
 
 @section('content_header')
-<a class="btn btn-success float-right" href="{{ route('admin.categories.create') }}">Agregar Categoría</a>
+<a class="btn btn-success float-right" href="{{ route('admin.categories.create') }}" style="width: 150px">Agregar Categoría</a>
 <h1>CATEGORIAS REGISTRADOS</h1>
 @stop
 
@@ -29,13 +29,13 @@
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
                             <td width="10px">
-                                <a class="btn btn-primary btn-sm" href="{{ route('admin.categories.edit',$category) }}">Editar</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('admin.categories.edit',$category) }}"><img src="{{ Storage::url('image/edit.png') }}"  alt=""></a>
                             </td>
                             <td width="10px">
                                 <form action="#" method="POST">
                                     @csrf
                                     
-                                    <button type="submit" class="btn @if ($category->status === '1') btn-warning @else btn-info @endif  btn-sm">@if ($category->status === '1') Deshabilitar @else Habilitar @endif</button>                                    
+                                    <button type="submit" class="btn @if ($category->status === '1') btn-success @else btn-warning @endif  btn-sm">@if ($category->status === '1') <img src="{{ Storage::url('image/active.png') }}"  alt=""> @else <img src="{{ Storage::url('image/desactive.png') }}"  alt=""> @endif</button>                                    
                                 </form>
                             </td>
                             <td width="10px">
@@ -43,7 +43,7 @@
                                     @csrf
                                     @method('delete')
 
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger btn-sm"><img src="{{ Storage::url('image/delete.png') }}"  alt="..."></button>
                                 </form>
                             </td>
                         </tr>

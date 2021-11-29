@@ -11,7 +11,7 @@
         <div class="card-body">
             {!! Form::open(['route' => 'admin.products.store','autocomplete' => 'off','files' => true]) !!}
                 <div class="form-group">
-                    {!! Form::label('name', 'Nombre') !!}
+                    {!! Form::label('name', 'Nombre') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                     {!! Form::text('name',null,['class' => 'form-control','placeholder' => 'Ingrese el nombre del producto']) !!}
                     
                     @error('name')
@@ -20,12 +20,12 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('category_id', 'Categoría') !!}
+                    {!! Form::label('category_id', 'Categoría') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                     {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('description', 'Descripción') !!}
+                    {!! Form::label('description', 'Descripción') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                     {!! Form::textarea('description', null, ['class' => 'form-control','placeholder' => 'Ingrese una descripcion del producto']) !!}
                     
                     @error('description')
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('lote', 'Cantidad') !!}
+                    {!! Form::label('lote', 'Cantidad') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                     {!! Form::number('lote', null, ['class' => 'form-control','placeholder' => 'Ingrese la cantidad del producto en inventario']) !!}
 
                     @error('description')
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('amount', 'Precio') !!}
+                    {!! Form::label('amount', 'Precio') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                     {!! Form::text('amount', null, ['class' => 'form-control','placeholder' => 'Ingrese el precio del producto']) !!}
                     
                     @error('amount')
@@ -53,8 +53,8 @@
 
                 <div class="row mb-3">
                     <div class="col">
-                        <div class="form-group">
-                            {!! Form::label('file', 'Imagen del producto') !!}
+                        <div class="form-group"> 
+                            {!! Form::label('file', 'Imagen del producto') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!}
                             {!! Form::file('file', ['class' => 'form-control-file','accept' => 'image/*']) !!}
                         </div>
                         @error('file')
@@ -70,7 +70,7 @@
 
                     <div class="col">
                         <div class="image-wrapper">
-                            <img id="picture" src="https://www.animalgourmet.com/wp-content/uploads/2019/04/pottery-2784564_1920.jpg" alt="">
+                            <img id="picture" src="https://www.animalgourmet.com/wp-content/uploads/2019/04/pottery-2784564_1920.jpg" alt="...">
                         </div>
                     </div>
                 </div>
@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="btn btn-danger" href="{{ route('admin.products.index') }}">Cancelar</a>
-                    {!! Form::submit('Agregar producto', ['class' => 'btn btn-primary']) !!}
+                    <a class="btn btn-danger" href="{{ route('admin.products.index') }}" style="width: 100px">Cancelar</a>
+                    {!! Form::submit('Agregar', ['class' => 'btn btn-primary','style' => 'width: 100px']) !!}
                 </div>
             {!! Form::close() !!}
         </div>

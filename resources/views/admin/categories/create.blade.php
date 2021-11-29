@@ -10,9 +10,10 @@
     <div class="card">
         <div class="card-body">
             {!! Form::open(['route' => 'admin.categories.store']) !!}
-
+            
                 <div class="form-group">
-                    {!! Form::label('name', 'Nombre') !!}
+                    
+                    {!! Form::label('name', 'Nombre') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
                     {!! Form::text('name',null,['class' => 'form-control','placeholder' => 'Ingrese el nombre de la categoría']) !!}
                     
                     @error('name')
@@ -30,8 +31,8 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="btn btn-danger" href="{{ route('admin.categories.index') }}">Cancelar</a>
-                    {!! Form::submit('Crear categoría', ['class' => 'btn btn-primary']) !!}
+                    <a class="btn btn-danger" href="{{ route('admin.categories.index') }}" style="width: 100px">Cancelar</a>
+                    {!! Form::submit('Crear', ['class' => 'btn btn-primary','style' => 'width: 100px']) !!}
                 </div>
             {!! Form::close() !!}
         </div>

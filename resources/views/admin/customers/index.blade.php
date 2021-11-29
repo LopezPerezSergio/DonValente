@@ -3,7 +3,7 @@
 @section('title', 'Clientes')
 
 @section('content_header')
-    <a class="btn btn-success float-right" href="{{ route('admin.customers.create') }}">Agregar Cliente</a>
+    <a class="btn btn-success float-right" href="{{ route('admin.customers.create') }}" style="width: 150px">Agregar Cliente</a>
     <h1>CLIENTES REGISTRADOS</h1>
 @stop
 

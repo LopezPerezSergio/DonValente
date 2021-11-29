@@ -3,7 +3,7 @@
 @section('title', 'Productos')
 
 @section('content_header')
-    <a class="btn btn-success float-right" href="{{ route('admin.products.create') }}">Agregar Producto</a>
+    <a class="btn btn-success float-right" href="{{ route('admin.products.create') }}" style="width: 150px">Agregar Producto</a>
     <h1>PRODUCTOS REGISTRADOS</h1>
 @stop
 
@@ -14,10 +14,17 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
     <style>
-        img {
-            width: 200px; /* You can set the dimensions to whatever you want */
-            height: 300px;
+        
+
+        .image-wrapper{
+            padding-bottom: 60%;
+        }
+
+        .image-wrapper img{
+            position: absolute;
             object-fit: cover;
+            width: 100%;
+            height: 40%;
         }
     </style>
 @stop

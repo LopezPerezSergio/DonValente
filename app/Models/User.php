@@ -59,6 +59,12 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    //Retorna la imagen de perfil del usuario hacia la plantilla AdminLTE
+    public function adminlte_image()
+    {
+        return auth()->user()->profile_photo_url;
+    }
+
     //Relacion uno a muchos
     public function tickets(){
         return $this->hasMany(Ticket::class);

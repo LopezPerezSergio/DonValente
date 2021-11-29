@@ -22,8 +22,9 @@
                                     {{ $product->name }}
                                 </div>
                                 {{-- Imagen del producto  clases por definir--}}
-                                <img class="card-img-top" src="@if ($product->image) {{ Storage::url($product->image->url) }}  @else https://cdn.pixabay.com/photo/2017/01/20/19/06/box-1995679_960_720.jpg @endif" alt="...">
-                                
+                                <div class="image-wrapper">
+                                    <img class="card-img-top" src="@if ($product->image) {{ Storage::url($product->image->url) }}  @else https://cdn.pixabay.com/photo/2017/01/20/19/06/box-1995679_960_720.jpg @endif" alt="...">    
+                                </div>                                
                                 {{-- Cuerpo de carta --}}
                                 <div class="card-body">
                                     <div class="mb-4" style="height: 7rem;">
@@ -37,19 +38,19 @@
                                 <div class="card-footer">
                                     
                                     <div class="d-grid gap-1 d-md-flex justify-content-md-end">
-                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.products.edit',$product) }}">Editar</a>
+                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.products.edit',$product) }}"><img src="{{ Storage::url('image/edit.png') }}"  alt=""></a>
                                         
                                         <form action="#" method="POST">
                                             @csrf
                                             
-                                            <button type="submit" class="btn @if ($product->status === '1') btn-warning @else btn-info @endif  btn-sm mr-1 ml-1">@if ($product->status === '1') Deshabilitar @else Habilitar @endif</button>                                    
+                                            <button type="submit" class="btn @if ($product->status === '1') btn-success @else btn-warning @endif  btn-sm mr-1 ml-1">@if ($product->status === '1') <img src="{{ Storage::url('image/active.png') }}"  alt=""> @else <img src="{{ Storage::url('image/desactive.png') }}"  alt=""> @endif</button>                                    
                                         </form>
                                         
                                         <form action="{{ route('admin.products.destroy',$product) }}" method="POST">
                                             @csrf
                                             @method('delete')
 
-                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                            <button type="submit" class="btn btn-danger btn-sm"><img src="{{ Storage::url('image/delete.png') }}"  alt=""></button>
                                         </form>
                                     </div>
                                 </div>

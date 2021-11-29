@@ -12,7 +12,7 @@
             {!! Form::open(['route' => 'admin.customers.store','autocomplete' => 'off']) !!}
 
                 <div class="form-group">
-                    {!! Form::label('name', 'Nombre') !!}
+                    {!! Form::label('name', 'Nombre') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
                     {!! Form::text('name',null,['class' => 'form-control','placeholder' => 'Nombre completo']) !!}
                     
                     @error('name')
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('addres', 'Direccion') !!}
+                    {!! Form::label('addres', 'Dirección') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
                     {!! Form::text('addres',null,['class' => 'form-control','placeholder' => 'Calle # - Colonia - Municipio - CP ']) !!}
                     
                     @error('addres')
@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('phone', 'Telefono') !!}
+                    {!! Form::label('phone', 'Teléfono') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
                     {!! Form::text('phone', null, ['class' => 'form-control','placeholder' => 'Ingrese el telefono']) !!}
                     
                     @error('phone')
@@ -53,8 +53,8 @@
                 </div>
 
                 <div class="form-group">
-                    <a class="btn btn-danger" href="{{ route('admin.customers.index') }}">Cancelar</a>
-                    {!! Form::submit('Agregar cliente', ['class' => 'btn btn-primary']) !!}
+                    <a class="btn btn-danger" href="{{ route('admin.customers.index') }}" style="width: 100px">Cancelar</a>
+                    {!! Form::submit('Agregar', ['class' => 'btn btn-primary','style' => 'width: 100px']) !!}
                 </div>
             {!! Form::close() !!}
         </div>
