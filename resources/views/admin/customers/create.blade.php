@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     {!! Form::label('addres', 'Dirección') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
-                    {!! Form::text('addres',null,['class' => 'form-control','placeholder' => 'Calle # - Colonia - Municipio - CP ']) !!}
+                    {!! Form::text('addres',null,['class' => 'form-control','placeholder' => 'Calle # - Colonia - Municipio - CP - Estado']) !!}
                     
                     @error('addres')
                         <span class="text-danger">{{ $message }}</span>

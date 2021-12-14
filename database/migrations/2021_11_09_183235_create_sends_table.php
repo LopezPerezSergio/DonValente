@@ -16,7 +16,7 @@ class CreateSendsTable extends Migration
         Schema::create('sends', function (Blueprint $table) {
             $table->id();
 
-            $table->string('ciudad');
+            /* $table->string('ciudad'); */
             $table->enum('status',['1','2'])->default(1); // 1 REPRESENTA pendiente Y 2 REPRESENTA enviado
 
             $table->unsignedBigInteger('user_id')->nullable();
@@ -25,13 +25,13 @@ class CreateSendsTable extends Migration
                   ->on('users')
                   ->onDelete('set null');
 
-            $table->unsignedBigInteger('state_id');
+            /* $table->unsignedBigInteger('state_id');
             $table->foreign('state_id')
                   ->references('id')
                   ->on('states')
-                  ->onDelete('cascade');
+                  ->onDelete('cascade'); */
             
-        $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')
                   ->references('id')
                   ->on('customers')

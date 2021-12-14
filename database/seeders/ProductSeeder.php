@@ -26,6 +26,11 @@ class ProductSeeder extends Seeder
                 rand(1,25),
                 rand(26,50)
             ]);
+
+            $product->sends()->attach([
+                rand(1,25),
+                rand(26,50)
+            ]);
         }
     }
 }

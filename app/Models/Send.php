@@ -18,7 +18,13 @@ class Send extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function satate(){
-        return $this->belongsTo(State::class);
+    //Relacion muchos a muchos
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
     }
+    
+    /* public function satate(){
+        return $this->belongsTo(State::class);
+    } */
 }

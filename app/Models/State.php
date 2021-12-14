@@ -10,7 +10,7 @@ class State extends Model
     use HasFactory;
 
     //Relacion uno a muchos
-    public function sends(){
+    /* public function sends(){
         return $this->hasMany(Send::class);
-    }
+    } */
 }

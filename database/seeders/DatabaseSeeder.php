@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         Customer::factory(50)->create();
         Category::factory(4)->create();
         Ticket::factory(50)->create();
-        Send::factory(10)->create();
+        Send::factory(50)->create();
         $this->call(ProductSeeder::class);
 
     }

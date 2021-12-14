@@ -241,7 +241,7 @@ return [
         ],
         ['header' => ''],
         ['header' => 'OPCIONES DE USUARIO'],
-        [
+        /* [
             'text'    => 'Ventas',
             'icon'    => 'fas fa-fw fa-store',
             'submenu' => [
@@ -256,7 +256,7 @@ return [
                     'icon' => 'fas fa-fw fa-print',
                 ],
             ],
-        ],
+        ], */
 
         [
             'text'    => 'Envios',
