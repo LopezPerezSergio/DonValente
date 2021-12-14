@@ -233,6 +233,7 @@ return [
         ],
 
         // Sidebar items:
+        ['header' => ''],
         [
             'text'        => 'Dashboard',
             'route'         => 'admin.home',
@@ -241,24 +242,42 @@ return [
         ['header' => ''],
         ['header' => 'OPCIONES DE USUARIO'],
         [
-            'text'        => 'Ventas',
-            'url'         => '#',
-            'icon'        => 'fas fa-fw fa-store', 
+            'text'    => 'Ventas',
+            'icon'    => 'fas fa-fw fa-store',
+            'submenu' => [
+                [
+                    'text'    => 'Realizar',
+                    'url'  => '#crear-venta',
+                    'icon' => 'fas fa-fw fa-cash-register',
+                ],
+                [
+                    'text' => 'Corte',
+                    'url'  => '#corte-caja',
+                    'icon' => 'fas fa-fw fa-print',
+                ],
+            ],
         ],
+
         [
-            'text'        => 'Envios',
-            'url'         => '#',
-            'icon'        => 'fas fa-fw fa-paper-plane', 
+            'text'    => 'Envios',
+            'icon'    => 'fas fa-fw fa-paper-plane',
+            'submenu' => [
+                [
+                    'text' => 'Visualizar',
+                    'url'  => '#ver-envios',
+                    'icon' => 'fas fa-fw fa-eye',
+                ],
+                [
+                    'text'    => 'Realizar',
+                    'url'  => '#crear-envio',
+                    'icon' => 'fas fa-plus-square',
+                ],
+            ],
         ],
         [
             'text' => 'Clientes',
             'route'  => 'admin.customers.index',
             'icon' => 'fas fa-fw fa-address-book', 
-        ],
-        [
-            'text'        => 'Reportes',
-            'url'         => '#',
-            'icon'        => 'fas fa-fw fa-print', 
         ],
         ['header' => ''],
         ['header' => 'OPCIONES DE ADMINISTRADOR'],      

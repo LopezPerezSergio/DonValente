@@ -38,19 +38,19 @@
                                 <div class="card-footer">
                                     
                                     <div class="d-grid gap-1 d-md-flex justify-content-md-end">
-                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.products.edit',$product) }}"><img src="{{ Storage::url('image/edit.png') }}"  alt=""></a>
+                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.products.edit',$product) }}"><i class="fas fa-edit"></i></a>
                                         
                                         <form action="#" method="POST">
                                             @csrf
                                             
-                                            <button type="submit" class="btn @if ($product->status === '1') btn-success @else btn-warning @endif  btn-sm mr-1 ml-1">@if ($product->status === '1') <img src="{{ Storage::url('image/active.png') }}"  alt=""> @else <img src="{{ Storage::url('image/desactive.png') }}"  alt=""> @endif</button>                                    
+                                            <button type="submit" class="btn @if ($product->status === '1') btn-success @else btn-warning @endif  btn-sm mr-1 ml-1">@if ($product->status === '1') <i class="fas fa-play"></i> @else <i class="fas fa-pause"></i> @endif</button>                                    
                                         </form>
                                         
                                         <form action="{{ route('admin.products.destroy',$product) }}" method="POST">
                                             @csrf
                                             @method('delete')
 
-                                            <button type="submit" class="btn btn-danger btn-sm"><img src="{{ Storage::url('image/delete.png') }}"  alt=""></button>
+                                            <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                                         </form>
                                     </div>
                                 </div>

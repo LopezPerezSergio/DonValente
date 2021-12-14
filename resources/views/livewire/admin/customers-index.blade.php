@@ -30,13 +30,13 @@
                             <td>{{ $customer->email }}</td>
                             <td>{{ $customer->phone }}</td>
                             <td width="10px">
-                                <a class="btn btn-primary btn-sm" href="{{ route('admin.customers.edit',$customer) }}"><img src="{{ Storage::url('image/edit.png') }}"  alt=""></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('admin.customers.edit',$customer) }}"><i class="fas fa-edit"></i></a>
                             </td>
                             <td width="10px">
                                 @if ( $customer->status === '1')
-                                    <a class="btn btn-success btn-sm" href="#"><img src="{{ Storage::url('image/active.png') }}"  alt=""></a>
+                                    <a class="btn btn-success btn-sm" href="#"><i class="fas fa-play"></i></a>
                                 @else
-                                    <a class="btn btn-warning btn-sm" href="#"><img src="{{ Storage::url('image/desactive.png') }}"  alt=""></a>
+                                    <a class="btn btn-warning btn-sm" href="#"><i class="fas fa-pause"></i></a>
                                 @endif
                             </td>
                             <td width="10px">
@@ -44,7 +44,7 @@
                                     @csrf
                                     @method('delete')
 
-                                    <button type="submit" class="btn btn-danger btn-sm"><img src="{{ Storage::url('image/delete.png') }}"  alt=""></button>
+                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                             </td>
                         </tr>
