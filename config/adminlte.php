@@ -127,7 +127,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-light-teal elevation-2',
+    'classes_sidebar' => 'sidebar-light-yellow elevation-4',
     'classes_sidebar_nav' => 'nav-compact nav-child-indent',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -264,12 +264,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Visualizar',
-                    'url'  => '#ver-envios',
+                    'route'  => 'admin.sends.index',
                     'icon' => 'fas fa-fw fa-eye',
                 ],
                 [
                     'text'    => 'Realizar',
-                    'url'  => '#crear-envio',
+                    'route'  => 'admin.sends.create',
                     'icon' => 'fas fa-plus-square',
                 ],
             ],

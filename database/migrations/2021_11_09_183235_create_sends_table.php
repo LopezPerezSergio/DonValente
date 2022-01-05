@@ -19,6 +19,9 @@ class CreateSendsTable extends Migration
             /* $table->string('ciudad'); */
             $table->enum('status',['1','2'])->default(1); // 1 REPRESENTA pendiente Y 2 REPRESENTA enviado
 
+            $table->string('paqueteria')->nullable();
+            $table->string('guia')->nullable();
+            
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')
                   ->references('id')

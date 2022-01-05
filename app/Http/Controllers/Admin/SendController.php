@@ -14,7 +14,7 @@ class SendController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.sends.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class SendController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.sends.create');
     }
 
     /**
