@@ -7,13 +7,13 @@
 @stop
 
 @section('content')
-    
+    @livewire('admin.sends-index')
 @stop
 
 @section('css')
-
+    
 @stop
 
 @section('js')
-
+    
 @stop

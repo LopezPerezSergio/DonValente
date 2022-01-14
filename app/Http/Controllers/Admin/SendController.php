@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Customer;
+use App\Models\Send;
 use Illuminate\Http\Request;
 
 class SendController extends Controller
@@ -24,7 +26,8 @@ class SendController extends Controller
      */
     public function create()
     {
-        return view('admin.sends.create');
+        $customers = Customer::pluck('name','id');
+        return view('admin.sends.create', compact('customers'));
     }
 
     /**
@@ -35,7 +38,9 @@ class SendController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $send = Send::create($request->all());
+
+        return redirect()->route('admin.sends.show',$send)->with('info','El envio se creó con éxito');
     }
 
     /**
@@ -44,9 +49,9 @@ class SendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Send $send)
     {
-        //
+        return view('admin.sends.show',compact('product'));
     }
 
     /**
@@ -55,9 +60,10 @@ class SendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Send $send)
     {
-        //
+        $customers = Send::pluck('name','id');
+        return view('admin.sends.edit',compact('send','customers'));
     }
 
     /**
@@ -67,9 +73,14 @@ class SendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Send $send)
     {
-        //
+        $request->validate([
+            'slug' => "required|unique:sends,slug,$send->id",
+        ]);
+
+        $send->update($request->all());
+        return redirect()->route('admin.sends.show',$send)->with('info','El producto se actualizó con éxito');
     }
 
     /**
