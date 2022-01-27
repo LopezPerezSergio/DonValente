@@ -28,11 +28,6 @@ class CreateSendsTable extends Migration
                   ->on('users')
                   ->onDelete('set null');
 
-            /* $table->unsignedBigInteger('state_id');
-            $table->foreign('state_id')
-                  ->references('id')
-                  ->on('states')
-                  ->onDelete('cascade'); */
             
             $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')

@@ -22,7 +22,7 @@ class ProductsIndex extends Component
     public function render()
     {
         $products = Product::where('name','LIKE','%'.$this->search.'%')
-                           ->paginate(9);
+                            ->paginate(9);
         return view('livewire.admin.products-index',compact('products'));
     }
 }
