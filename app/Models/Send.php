@@ -9,6 +9,8 @@ class Send extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id','created_at','updated_at'];
+
     //Relacion uno a muchos inversa
     public function user(){
         return $this->belongsTo(User::class);
@@ -19,10 +21,10 @@ class Send extends Model
     }
 
     //Relacion muchos a muchos
-    public function products()
+    /* public function products()
     {
         return $this->belongsToMany(Product::class);
-    }
+    } */
     
     /* public function satate(){
         return $this->belongsTo(State::class);

@@ -17,12 +17,11 @@ class SendFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->unique()->sentence();
-
+        
         return [
-            'paqueteria' => $name,
-            'guia' => $this->faker->unique()->sentence(),
-            'status' => $this->faker->randomElement([1,2]),
+            'status' => $this->faker->randomElement([1,2,3,4]),
+            'paqueteria' => $this->faker->randomElement([0,1,2,3,4,5]),
+            'guia' => Str::random(16),
             'user_id' => User::all()->random()->id,
             'customer_id'=> Customer::all()->random()->id,
         ];

@@ -38,9 +38,16 @@ class SendController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->status != '1'){
+            $request->validate([
+                'paqueteria' => 'required',
+                'guia' => 'required',
+            ]);
+        }
+        
         $send = Send::create($request->all());
 
-        return redirect()->route('admin.sends.show',$send)->with('info','El envio se creó con éxito');
+        return redirect()->route('admin.sends.index')->with('info','El envio se creó con éxito');
     }
 
     /**
@@ -62,7 +69,7 @@ class SendController extends Controller
      */
     public function edit(Send $send)
     {
-        $customers = Send::pluck('name','id');
+        $customers = Customer::pluck('name','id');
         return view('admin.sends.edit',compact('send','customers'));
     }
 
@@ -75,12 +82,15 @@ class SendController extends Controller
      */
     public function update(Request $request, Send $send)
     {
-        $request->validate([
-            'slug' => "required|unique:sends,slug,$send->id",
-        ]);
-
+        if($request->status != '1'){
+            $request->validate([
+                'paqueteria' => 'required',
+                'guia' => 'required',
+            ]);
+        }
+        
         $send->update($request->all());
-        return redirect()->route('admin.sends.show',$send)->with('info','El producto se actualizó con éxito');
+        return redirect()->route('admin.sends.index')->with('info','El envio se actualizo con éxito');
     }
 
     /**

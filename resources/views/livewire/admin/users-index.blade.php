@@ -28,14 +28,7 @@
                             <td width="10px">
                                 <a class="btn btn-info btn-sm" href="{{ route('admin.users.show',$user) }}"><i class="fas fa-eye"></i></a>
                             </td>
-                            <td width="10px">
-                                <form action="{{ route('admin.users.destroy',$user) }}" method="POST">
-                                    @csrf
-                                    @method('delete')
-
-                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                </form>
-                            </td>
+                            
                         </tr>
                     @endforeach
                 </tbody>

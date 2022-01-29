@@ -20,6 +20,6 @@ class UserSeeder extends Seeder
             'password'=> encrypt('123456789')
         ]);
         
-        User::factory(24)->create();
+        User::factory(4)->create();
     }
 }

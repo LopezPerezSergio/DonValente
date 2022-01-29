@@ -15,7 +15,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $products = Product::factory(50)->create();
+        $products = Product::factory(5)->create();
 
         foreach($products as $product) {
             Image::factory(1)->create([
@@ -25,12 +25,12 @@ class ProductSeeder extends Seeder
             $product->tickets()->attach([
                 rand(1,25),
                 rand(26,50)
-            ]);
+            ]);/* 
 
             $product->sends()->attach([
                 rand(1,25),
                 rand(26,50)
-            ]);
+            ]); */
         }
     }
 }

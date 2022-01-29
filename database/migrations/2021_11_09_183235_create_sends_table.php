@@ -17,23 +17,23 @@ class CreateSendsTable extends Migration
             $table->id();
 
             /* $table->string('ciudad'); */
-            $table->enum('status',['1','2'])->default(1); // 1 REPRESENTA pendiente Y 2 REPRESENTA enviado
+            $table->enum('status', ['1', '2','3','4'])->default(1); // 1 PENDIENTE, 2 DEPOSITADO , 3 ENVIADO Y 4 ENTREGADO  
 
-            $table->string('paqueteria')->nullable();
+            $table->enum('paqueteria',['0','1','2','3','4','5'])->default(0);
             $table->string('guia')->nullable();
-            
+
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users')
-                  ->onDelete('set null');
+                ->references('id')
+                ->on('users')
+                ->onDelete('set null');
 
-            
+
             $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')
-                  ->references('id')
-                  ->on('customers')
-                  ->onDelete('cascade');
+                ->references('id')
+                ->on('customers')
+                ->onDelete('cascade');
 
             $table->timestamps();
         });

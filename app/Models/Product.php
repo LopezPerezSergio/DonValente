@@ -22,10 +22,10 @@ class Product extends Model
         return $this->belongsToMany(Ticket::class);
     }
 
-    public function sends()
+    /* public function sends()
     {
         return $this->belongsToMany(Send::class);
-    }
+    } */
 
     //Relacion uno a uno polimorfica
     public function image()
