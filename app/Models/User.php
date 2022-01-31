@@ -73,4 +73,10 @@ class User extends Authenticatable
     public function sends(){
         return $this->hasMany(Send::class);
     }
+
+    public function adminlte_profile_url()
+    {
+        $user = auth()->user();
+        return route('profile.show',compact('user'));
+    }
 }
