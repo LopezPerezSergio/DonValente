@@ -16,9 +16,9 @@
                 <thead>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Direccion</th>
+                    <th>Dirección</th>
                     <th>Correo</th>
-                    <th>Telefono</th>
+                    <th>Teléfono</th>
                     <th colspan="3">Opciones</th>
                 </thead>
                 <tbody>

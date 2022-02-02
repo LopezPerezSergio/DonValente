@@ -3,7 +3,8 @@
 @section('title', 'Categorías')
 
 @section('content_header')
-<a class="btn btn-success float-right" href="{{ route('admin.categories.create') }}" style="width: 150px">Agregar Categoría</a>
+<a class="btn btn-success float-right" href="{{ route('admin.categories.create') }}" style="width: 150px; margin: 0 1em">Agregar Categoría</a>
+<a target='_Blank' class="btn btn-danger float-right" href="{{ route('admin.pdf.categories') }}" style="width: 50px;">PDF</a>
 <h1>CATEGORIAS REGISTRADOS</h1>
 @stop
 

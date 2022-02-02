@@ -259,7 +259,7 @@ return [
         ], */
 
         [
-            'text'    => 'Envios',
+            'text'    => 'Envíos',
             'icon'    => 'fas fa-fw fa-paper-plane',
             'submenu' => [
                 [
@@ -312,21 +312,25 @@ return [
         ['header' => 'ESTATUS DE ENVIO'],
         [
             'text'       => 'Pendiente',
+            'icon'    => 'fas fa-fw fa-circle',
             'icon_color' => 'red',
             'url'        => '#',
         ],
         [
-            'text'       => 'Depositado en Paqueteria',
+            'text'       => 'Depositado en Paquetería',
+            'icon'    => 'fas fa-fw fa-circle',
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
         [
             'text'       => 'Enviado',
+            'icon'    => 'fas fa-fw fa-circle',
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
         [
             'text'       => 'Entregado',
+            'icon'    => 'fas fa-fw fa-circle',
             'icon_color' => 'green',
             'url'        => '#',
         ],
@@ -388,7 +392,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -418,7 +422,7 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11',
                 ],
             ],
         ],

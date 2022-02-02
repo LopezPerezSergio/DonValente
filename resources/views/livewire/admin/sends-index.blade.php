@@ -33,14 +33,14 @@
                                 <div class="card-body">
                                     <div class="mb-4" style="height: 17rem;">
                                         <p class="card-text">
-                                            <b>Atendio: </b>{{ $send->user->name }}
+                                            <b>Atendió: </b>{{ $send->user->name }}
                                         </p>
                                         <p>
-                                            <b>Fecha de atencion:</b>{{ $send->created_at }}
+                                            <b>Fecha de atención:</b>{{ $send->created_at }}
                                         </p>
                                         <hr>
                                         <p>
-                                            <b>Paqueteria:</b>
+                                            <b>Paquetería:</b>
                                             @if ($send->paqueteria === '0') PENDIENTE POR ASIGNAR @endif
                                             @if ($send->paqueteria === '1') AUTOBUSES ESTRELLA BLANCA @endif
                                             @if ($send->paqueteria === '2') DHL @endif
@@ -49,14 +49,14 @@
                                             @if ($send->paqueteria === '5') ARAGAL @endif
                                         </p>
                                         <p>
-                                            <b>Guia del Envio:</b> {{ $send->guia }}
+                                            <b>Guía del Envío:</b> {{ $send->guia }}
                                         </p>
                                         <hr>
                                         <p>
                                             <b>Cliente:</b> {{ $send->customer->name }}
                                         </p>
                                         <p>
-                                            <b>Direccion:</b> {{ $send->customer->addres }}
+                                            <b>Dirección:</b> {{ $send->customer->addres }}
                                         </p>
                                     </div>
 

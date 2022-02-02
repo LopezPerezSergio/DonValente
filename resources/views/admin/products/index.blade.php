@@ -4,6 +4,7 @@
 
 @section('content_header')
     <a class="btn btn-success float-right" href="{{ route('admin.products.create') }}" style="width: 150px">Agregar Producto</a>
+    <a target='_Blank' class="btn btn-danger float-right" href="{{ route('admin.pdf.products') }}" style="width: 50px; margin: 0 1em">PDF</a>
     <h1>PRODUCTOS REGISTRADOS</h1>
 @stop
 

@@ -9,13 +9,13 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::model($send,['route' => ['admin.sends.update',$send],'autocomplete' => 'off','files' => true,'method' => 'put']) !!}
+            {!! Form::model($send, ['route' => ['admin.sends.update', $send], 'autocomplete' => 'off', 'files' => true, 'method' => 'put']) !!}
 
             {!! Form::hidden('user_id', auth()->user()->id) !!}
 
             <div class="form-group">
                 {!! Form::label('customer_id', 'Cliente') !!} {!! Form::label('*', '*', ['style' => 'color:red']) !!}
-                {!! Form::select('customer_id', $customers, null, ['class' => 'form-control','disabled']) !!}
+                {!! Form::select('customer_id', $customers, null, ['class' => 'form-control', 'disabled']) !!}
             </div>
 
             <div class="form-group">
@@ -23,13 +23,9 @@
                 {!! Form::select('status', ['1' => 'Pendiente', '2' => 'Depositado', '3' => 'Enviado', '4' => 'Entregado'], null, ['class' => 'form-control']) !!}
             </div>
 
-            <div class="form-group"> 
+            <div class="form-group">
                 {!! Form::label('paqueteria', 'Paqueteria') !!} {!! Form::label('*', '*', ['style' => 'color:red']) !!}
-                {!! Form::select('paqueteria', ['1' => 'AUTOBUSES ESTRELLA BLANCA',
-                                                '2' => 'DHL', 
-                                                '3' => 'ESTAFETA', 
-                                                '4' => 'FEDEX',
-                                                '5' => 'ARAGAL'], null, ['class' => 'form-control']) !!}
+                {!! Form::select('paqueteria', ['1' => 'AUTOBUSES ESTRELLA BLANCA', '2' => 'DHL', '3' => 'ESTAFETA', '4' => 'FEDEX', '5' => 'ARAGAL'], null, ['class' => 'form-control']) !!}
 
                 @error('paqueteria')
                     <span class="text-danger">{{ $message }}</span>
@@ -59,5 +55,5 @@
 @stop
 
 @section('js')
-
+    
 @stop

@@ -19,7 +19,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('paqueteria', 'Paqueteria') !!}
+                {!! Form::label('paqueteria', 'Paquetería') !!}
                 {!! Form::select('paqueteria', ['0' => 'PENDIENTE',
                                                 '1' => 'AUTOBUSES ESTRELLA BLANCA',
                                                 '2' => 'DHL', 
@@ -33,9 +33,9 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('guia', 'Guia de rastreo') !!}
+                {!! Form::label('guia', 'Guía de rastreo') !!}
                 {!! Form::text('guia', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre de la paqueteria']) !!}
-                @error('paqueteria')
+                @error('guia')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>

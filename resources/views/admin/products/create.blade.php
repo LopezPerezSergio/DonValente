@@ -70,7 +70,7 @@
 
                     <div class="col">
                         <div class="image-wrapper">
-                            <img id="picture" src="https://www.animalgourmet.com/wp-content/uploads/2019/04/pottery-2784564_1920.jpg" alt="...">
+                            <img id="picture" src="https://www.celtiberian.es/wp-content/uploads/2019/01/cloud-computing-upload-transparent.png" alt="...">
                         </div>
                     </div>
                 </div>

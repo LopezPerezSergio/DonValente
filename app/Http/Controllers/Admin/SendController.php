@@ -90,7 +90,7 @@ class SendController extends Controller
         }
         
         $send->update($request->all());
-        return redirect()->route('admin.sends.index')->with('info','El envio se actualizo con éxito');
+        return redirect()->route('admin.sends.index')->with('fireAlert', '1');
     }
 
     /**

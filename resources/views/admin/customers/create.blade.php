@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('email', 'Correo') !!}
+                    {!! Form::label('email', 'Correo') !!} {!! Form::label('*', '*',['style' => 'color:red']) !!} 
                     {!! Form::email('email', null, ['class' => 'form-control','placeholder' => 'Ingrese el correo electronico']) !!}
                 </div>
                 

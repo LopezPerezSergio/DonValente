@@ -39,6 +39,7 @@ class CustomerController extends Controller
         $request->validate([
             'name' => 'required',
             'slug' => 'required|unique:customers',
+            'email' => 'required',
             'addres' => 'required',
             'phone' => 'required'
         ]);
@@ -81,6 +82,7 @@ class CustomerController extends Controller
         $request->validate([
             'name' => 'required',
             'slug' => "required|unique:customers,slug,$customer->id",
+            'email' => 'required',
             'addres' => 'required',
             'phone' => 'required'
         ]);

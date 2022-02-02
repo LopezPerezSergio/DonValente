@@ -16,7 +16,7 @@
                 <thead>
                     <th>#</th>
                     <th>Nombre</th>
-                    <th>Email</th>
+                    <th>Correo</th>
                     <th colspan="2">Opciones</th>
                 </thead>
                 <tbody>
