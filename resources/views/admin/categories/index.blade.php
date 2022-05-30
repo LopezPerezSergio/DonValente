@@ -39,7 +39,7 @@
                                     <button type="submit" class="btn @if ($category->status === '1') btn-success @else btn-warning @endif  btn-sm">@if ($category->status === '1') <i class="fas fa-play"></i> @else <i class="fas fa-pause"></i> @endif</button>                                    
                                 </form>
                             </td>
-                            <td width="10px">
+                            <td width="">
                                 <form action="{{ route('admin.categories.destroy',$category) }}" method="POST">
                                     @csrf
                                     @method('delete')
