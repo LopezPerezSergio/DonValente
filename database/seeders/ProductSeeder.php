@@ -22,15 +22,6 @@ class ProductSeeder extends Seeder
                 'imageable_id' => $product->id,
                 'imageable_type' => Product::class
             ]);
-            $product->tickets()->attach([
-                rand(1,25),
-                rand(26,50)
-            ]);/* 
-
-            $product->sends()->attach([
-                rand(1,25),
-                rand(26,50)
-            ]); */
         }
     }
 }

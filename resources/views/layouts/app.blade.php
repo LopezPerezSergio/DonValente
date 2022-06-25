@@ -23,11 +23,7 @@
 
         <div class="min-h-screen bg-gray-100">
             
-            @auth
-                
-            @else
-                @livewire('nav')
-            @endauth
+            @livewire('nav')
 
             <!-- Page Content -->
             <main>

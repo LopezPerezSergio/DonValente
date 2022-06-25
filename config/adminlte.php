@@ -235,7 +235,7 @@ return [
         // Sidebar items:
         ['header' => ''],
         [
-            'text'        => 'Dashboard',
+            'text'        => 'Principal',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-fw fa-house-user', 
         ],

@@ -30,7 +30,8 @@ class ProductController extends Controller
      */
     public function create()
     {   
-        $categories = Category::pluck('name','id'); 
+        $categories = Category::pluck('name','id');
+        //return $categories; 
         return view('admin.products.create',compact('categories'));
     }
 
